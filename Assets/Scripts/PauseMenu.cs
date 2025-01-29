@@ -47,8 +47,18 @@ public class PauseMenu : MonoBehaviour
     }
 
 
+    public void GoToMainMenu() //volver al menu desde el MENU DE GAME OVER
+    {
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+        SceneManager.LoadScene("Menu"); // Carga la escena del menú
+    }
 
-
+ public void TryAgain() //JUGAR OTRA PARTIDA DESDE EL MENU DE GAME OVER
+{
+    Time.timeScale = 1f; // ¡Importante!
+    SceneManager.LoadScene("Game"); // Reinicia todo desde cero
+}
 
 
 }

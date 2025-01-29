@@ -45,7 +45,16 @@ public class GameManager : MonoBehaviour
 
     public void GameOver() //metodo para el game over
     {
+        int currentScore = Mathf.RoundToInt(player.transform.position.z);
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+
+        if (currentScore > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", currentScore);
+        }
+
         GameOverMenu.SetActive(true);
+
     }
 
 
