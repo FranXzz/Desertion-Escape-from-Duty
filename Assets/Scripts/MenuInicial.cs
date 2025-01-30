@@ -39,22 +39,5 @@ public class MenuInicial : MonoBehaviour
         Application.Quit();
     }
 
-    //public void GoMenu()
-    //{
-    //    // Encuentra el objeto con el script MovementControlls
-    //    MovementControlls movementController = FindObjectOfType<MovementControlls>();
-
-    //    // Si se encuentra el objeto, llama a su metodo RestartGame
-    //    if (movementController != null)
-    //    {
-    //        movementController.RestartGame();
-    //    }
-
-    //    // Carga la escena del menú
-    //    SceneManager.LoadScene("Menu");
-    //}
-
-
-
 
 }

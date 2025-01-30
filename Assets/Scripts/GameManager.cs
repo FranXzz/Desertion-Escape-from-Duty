@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", currentScore);
         }
 
+
+        FindObjectOfType<LeaderboardManager>().SendScore(currentScore);
+
+
         GameOverMenu.SetActive(true);
 
     }
