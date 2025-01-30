@@ -24,16 +24,22 @@ public class MenuLeaderboard : MonoBehaviour
 
         string playerId = AuthenticationService.Instance.PlayerId;
 
-        // Verificar si el nombre está guardado en PlayerPrefs con la ID del jugador
-        if (string.IsNullOrEmpty(AuthenticationService.Instance.PlayerName))
-        {
-            namePromptPanel.SetActive(true); // Mostrar el panel para ingresar el nombre
-        }
-        else
-        {
-            namePromptPanel.SetActive(false); // Ocultar el panel si ya está guardado
-            await FetchLeaderboard(); // Cargar la tabla de clasificación
-        }
+
+        await FetchLeaderboard(); // Cargar la tabla de clasificación
+
+        //// Verificar si el nombre está guardado en PlayerPrefs con la ID del jugador
+        //if (string.IsNullOrEmpty(AuthenticationService.Instance.PlayerName))
+        //{
+        //    namePromptPanel.SetActive(true); // Mostrar el panel para ingresar el nombre
+        //}
+        //else
+        //{
+        //    namePromptPanel.SetActive(false); // Ocultar el panel si ya está guardado
+        //    await FetchLeaderboard(); // Cargar la tabla de clasificación
+        //}
+
+
+
     }
 
     private async Task InitializeUGS()
