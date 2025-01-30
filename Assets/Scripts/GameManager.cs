@@ -26,7 +26,9 @@ public class GameManager : MonoBehaviour
         int distance = Mathf.RoundToInt(player.transform.position.z); // para calcular la distancia para el coso de metros
 
         uiDistance.text = distance.ToString() + "m";
-        uiPuntaje.text = (distance * 3.14).ToString("0.00") + " points"; // Multiplica la distancia por 100 y lo convierte a string
+        uiPuntaje.text = distance.ToString() + "m";
+
+        //uiPuntaje.text = (distance * 3.14).ToString("0.00") + " points"; // Multiplica la distancia por 100 y lo convierte a string
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
